@@ -20,7 +20,9 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow:hidden;
   }
+  
   
   .app-title {
     font-size: 3rem; 
@@ -96,6 +98,7 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow:hidden;
   }
   
    #scrollableDiv {
@@ -116,8 +119,7 @@ input[type="text"]:focus {
 .app-footer {
     text-align: center; 
     margin-top: 20px; 
-    padding: 10px; 
-    background-color: #f8f8f8; 
+     background-color: #f8f8f8; 
     font-size: 14px; 
     color: #555; 
   }
