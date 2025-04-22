@@ -63,27 +63,27 @@ const LaunchList = ({ searchTerm }) => {
     setExpandedLaunchId((prevId) => (prevId === id ? null : id));
   };
   
-  // Helper function to determine launch status and appropriate styling
+  
   const getLaunchStatus = (launch) => {
     const launchDate = new Date(launch.launch_date_utc);
     const now = new Date();
     
-    // Status determination
+    
     let status = '';
     let bgColor = '';
     
     if (!launch.launch_success && launchDate > now) {
       status = 'upcoming';
-      bgColor = '#17a2b8'; // teal color for upcoming
+      bgColor = '#17a2b8'; 
     } else if (launch.launch_success === true) {
       status = 'success';
-      bgColor = '#28a745'; // green for success
+      bgColor = '#28a745'; 
     } else if (launch.launch_success === false) {
       status = 'failed';
-      bgColor = '#dc3545'; // red for failure
+      bgColor = '#dc3545'; 
     } else if (launchDate < now) {
       status = 'unknown';
-      bgColor = '#6c757d'; // gray for unknown status
+      bgColor = '#6c757d'; 
     }
     
     return {
